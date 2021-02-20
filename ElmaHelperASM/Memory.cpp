@@ -12,12 +12,12 @@ void MemPatch(BYTE* Dest, BYTE* Src, int Len) {
 	VirtualProtect(Dest, Len, Old, &Old);
 }
 
-void MemPatchInt(BYTE* Dest, unsigned int* Src, int Len) {
+void MemPatchInt(BYTE* Dest, unsigned int* Src) {
 	DWORD Old;
-
-	VirtualProtect(Dest, Len, PAGE_EXECUTE_READWRITE, &Old);
-	memcpy(Dest, Src, Len);
-	VirtualProtect(Dest, Len, Old, &Old);
+	int len = sizeof(unsigned int);
+	VirtualProtect(Dest, len, PAGE_EXECUTE_READWRITE, &Old);
+	memcpy(Dest, Src, len);
+	VirtualProtect(Dest, len, Old, &Old);
 }
 
 void CallPatch(BYTE* Dest, BYTE* Src, int Nops) {
@@ -49,9 +49,3 @@ void MemPatchTemplate(BYTE* Dest, T Src, int Len) {
 	VirtualProtect(Dest, Len, Old, &Old);
 }
 
-template<class T>
-void GetFuncAddr(void *func) {
-
-	std::function<void(T*)> memfun(&T::func);
-
-}

@@ -41,9 +41,6 @@
     <ClCompile Include="ElmaHelperASM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Memory.cpp">
       <Filter>Memory</Filter>
     </ClCompile>
