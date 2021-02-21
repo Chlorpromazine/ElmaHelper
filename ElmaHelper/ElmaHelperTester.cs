@@ -13,12 +13,12 @@ namespace ElmaHelper
 
         private void Testing_Click(object sender, EventArgs e)
         {
-            HelperMain.testing(0);
+           
         }
 
         private void TestingRight_Click(object sender, EventArgs e)
         {
-            HelperMain.testing(1);
+           
         }
     }
 }

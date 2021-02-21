@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DllExports.h" />
     <ClInclude Include="dllmain.h" />
     <ClInclude Include="ElmaHelperASM.h" />
     <ClInclude Include="Memory.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DllExports.cpp" />
     <ClCompile Include="ElmaHelperASM.cpp" />
     <ClCompile Include="Memory.cpp">
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
