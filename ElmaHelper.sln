@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElmaHelper", "ElmaHelper\ElmaHelper.csproj", "{C773FBAB-BE33-45FC-BFEC-B0BFF07B2FE2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{17010EB1-5B9C-40D5-A49F-A3436D0C1EC9} = {17010EB1-5B9C-40D5-A49F-A3436D0C1EC9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ElmaHelperASM", "ElmaHelperASM\ElmaHelperASM.vcxproj", "{17010EB1-5B9C-40D5-A49F-A3436D0C1EC9}"
 EndProject

@@ -16,6 +16,12 @@
     <Filter Include="Memory">
       <UniqueIdentifier>{681c0eef-5e46-40c7-85f2-b74e5fb27ba5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Exports">
+      <UniqueIdentifier>{c8305d20-3efe-44e7-926b-dac84ae7ab61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing">
+      <UniqueIdentifier>{ca1f7a70-60f3-4dbc-8fff-31e16c9eeab6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,7 +40,16 @@
       <Filter>Memory</Filter>
     </ClInclude>
     <ClInclude Include="DllExports.h">
-      <Filter>Header Files</Filter>
+      <Filter>Exports</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw.h">
+      <Filter>Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawingObjects.h">
+      <Filter>Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawInject.h">
+      <Filter>Drawing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -48,7 +63,16 @@
       <Filter>Memory</Filter>
     </ClCompile>
     <ClCompile Include="DllExports.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Exports</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw.cpp">
+      <Filter>Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawingObjects.cpp">
+      <Filter>Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawInject.cpp">
+      <Filter>Drawing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,23 +1,26 @@
-﻿
+﻿using ElmaHelper.Drawing;
+
 namespace ElmaHelper
 {
     public class HelperMain
     {
         static public int HelperExport(string L)
         {
-           
             Testing.Initialize();
-            while (true)
+            Draw.Initialize();
+            var testObj = new DrawingText
             {
-                DllImports.ModifyMemValue(0x00453B20, 0);
-                System.Threading.Thread.Sleep(1000);
-                DllImports.ModifyMemValue(0x00453B20, 1);
-                System.Threading.Thread.Sleep(1000);
+                text = "test",
+                name = "testName",
+                parentName = "",
+                x = 50,
+                y = 50,
+                zOrder = 100,
+                visible = true
+            };
+            Draw.DrawObject(testObj);
 
-            }
             return 0;
         }
-
-
     }
 }

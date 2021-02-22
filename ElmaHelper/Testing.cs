@@ -19,7 +19,6 @@ namespace ElmaHelper
                     System.Threading.Thread.Sleep(1);
                 }
             });
-
         }
     }
 }
