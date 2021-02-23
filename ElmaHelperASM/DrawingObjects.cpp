@@ -8,10 +8,13 @@ void DrawingText::drawScreen()
 	const char* cText = text.c_str();
 	int font = *(int*)fontText;
 	int surface = *(int*)playingSurf;
+	int x = xPos;
+	int y = yPos;
+	int charSpace = spaceBetweenChars;
 
 	__asm 
 	{
-		push -1000 //todo: why does -1000 work but putting an int variable with -1000 doesn't work?
+		push charSpace 
 		push cText
 		push y
 		push x

@@ -12,10 +12,10 @@ protected:
 	static const int RectFillDrawFunction = 0x00429580;
 
 public:
-	const char* name;
-	const char* parentName;
-	int x;
-	int y;
+	std::string name;
+	std::string parentName;
+	int xPos;
+	int yPos;
 	int zOrder;
 	bool visible;
 	

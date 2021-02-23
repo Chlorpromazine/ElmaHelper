@@ -26,8 +26,12 @@
 		public byte color;
 	}
 
-	class DrawingLineArrow : DrawingLine
+	class DrawingLineArrow : DrawingObjects
 	{
+		public int x2;
+		public int y2;
+		public double maxLength;
+		public double minLength;
 		public byte color;
 	};
 

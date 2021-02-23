@@ -48,15 +48,13 @@ extern "C"
 		drawObj->text = text;
 		drawObj->name = name;
 		drawObj->parentName = parentName;
-		drawObj->x = x;
-		drawObj->y = y;
+		drawObj->xPos = x;
+		drawObj->yPos = y;
 		drawObj->zOrder = zOrder;
 		drawObj->visible = visible;
 		drawObj->spaceBetweenChars = spaceBetweenChars;
 
 		Drawing.AddObjectToDraw(drawObj);
-
-		//delete drawObj;
 	}
 
 #pragma endregion Drawing
