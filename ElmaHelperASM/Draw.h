@@ -16,6 +16,8 @@ private:
 
 	static const int PixelDrawFunction = 0x00429490;
 
+	static bool updated;
+
 public:
 	static void InitDrawing();
 
@@ -24,8 +26,6 @@ public:
 	static void RemoveDrawObject(std::string name);
 
 	static void SortObjectsByZorder();
-
-	static void DrawPixel(int x, int y, byte color);
 
 	static void DrawAllObjects();
 

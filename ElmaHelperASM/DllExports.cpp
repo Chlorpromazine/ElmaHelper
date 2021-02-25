@@ -32,11 +32,6 @@ extern "C"
 		Drawing.InitDrawing();
 	}
 
-	void dllexp DrawPixel(int x, int y, BYTE color)
-	{
-		Drawing.DrawPixel(x, y, color);
-	}
-	
 	/*void dllexp DrawObject(DrawingObjects* drawObj)
 	{
 		Drawing.AddObjectToDraw(drawObj);
@@ -55,6 +50,59 @@ extern "C"
 		drawObj->spaceBetweenChars = spaceBetweenChars;
 
 		Drawing.AddObjectToDraw(drawObj);
+	}
+
+	void dllexp DrawLine(const char* name, const char* parentName, int x, int y, int x2, int y2, int color, int zOrder, bool visible, bool arrow)
+	{
+		auto drawObj = new DrawingLine();
+		if(arrow) drawObj = new DrawingArrow();
+		drawObj->name = name;
+		drawObj->parentName = parentName;
+		drawObj->xPos = x;
+		drawObj->yPos = y;
+		drawObj->xPos2 = x2;
+		drawObj->yPos2 = y2;
+		drawObj->color = color;
+		drawObj->zOrder = zOrder;
+		drawObj->visible = visible;
+
+		Drawing.AddObjectToDraw(drawObj);
+	}
+	
+	void dllexp DrawCircle(const char* name, const char* parentName, int x, int y, int rad, int color, int zOrder, bool visible)
+	{
+		auto drawObj = new DrawingCircle();
+		drawObj->name = name;
+		drawObj->parentName = parentName;
+		drawObj->xPos = x;
+		drawObj->yPos = y;
+		drawObj->rad = rad;
+		drawObj->color = color;
+		drawObj->zOrder = zOrder;
+		drawObj->visible = visible;
+
+		Drawing.AddObjectToDraw(drawObj);
+	}
+
+	void dllexp DrawRect(const char* name, const char* parentName, int x, int y, int x2, int y2, int color, int zOrder, bool visible)
+	{
+		auto drawObj = new DrawingRect();
+		drawObj->name = name;
+		drawObj->parentName = parentName;
+		drawObj->xPos = x;
+		drawObj->yPos = y;
+		drawObj->xPos2 = x2;
+		drawObj->yPos2 = y2;
+		drawObj->color = color;
+		drawObj->zOrder = zOrder;
+		drawObj->visible = visible;
+
+		Drawing.AddObjectToDraw(drawObj);
+	}
+
+	void dllexp RemoveDrawObject(const char* name) 
+	{
+		Drawing.RemoveDrawObject(name);
 	}
 
 #pragma endregion Drawing

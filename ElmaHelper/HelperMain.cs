@@ -1,4 +1,5 @@
 ﻿using ElmaHelper.Drawing;
+using System.Threading;
 
 namespace ElmaHelper
 {
@@ -9,31 +10,30 @@ namespace ElmaHelper
             Testing.Initialize();
             Draw.Initialize();
 
-           
-            var testObj = new DrawingText
-            {
-                text = "test1231",
-                name = "testName",
-                parentName = "",
-                x = 123,
-                y = 123,
-                zOrder = 1,
-                visible = true
-            };
-            Draw.DrawObject(testObj);
+          
 
-            var testObj2 = new DrawingText
+            var testObj2 = new DrawingLine
             {
-                text = "abcdef",
                 name = "testName2",
                 parentName = "",
-                x = 111,
+                x = 1111,
                 y = 222,
-                zOrder = 2,
-                visible = true
+                x2 = 123,
+                y2 = 312,
+                zOrder = 311,
+                visible = true,
+                color = 231
             };
-            Draw.DrawObject(testObj2);
 
+            
+
+            while (true)
+            {
+
+                Draw.DrawObject(testObj2);
+              
+                Thread.Sleep(1000);
+            }
             return 0;
         }
     }

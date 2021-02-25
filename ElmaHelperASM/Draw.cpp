@@ -5,41 +5,32 @@
 std::map<std::string, DrawingObjects*> Draw::drawObjects;
 std::map<std::string, DrawingObjects*> Draw::drawObjectsBuffer;
 std::mutex Draw::drawLock;
+bool Draw::updated;
 
 void Draw::InitDrawing() 
 {
-	//drawObjects = new std::vector<DrawingObjects>();
 	//Hook code to add our drawing functions
 	Memory.JumpPatch((BYTE*)0x0049559E, (BYTE*)&drawInject, 0);
+
+	updated = false;
 }
 
-void Draw::DrawPixel(int x, int y, byte color) 
-{
-	//int surface = *(int*)playingSurf;
-	////todo: add error messages
-	//if (surface == NULL) return;
 
-	//__asm 
-	//{
-	//	mov ecx, surface
-	//	push color
-	//	push y
-	//	push x
-	//	call PixelDrawFunction
-	//}
-
-}
 
 void Draw::DrawAllObjects()
 {
-	drawLock.lock();
-	
-	for (auto &var : drawObjectsBuffer)
+	if (updated) 
 	{
-		var.second->drawScreen();
+		drawLock.lock();
+		drawObjects.clear();
+		drawObjects = drawObjectsBuffer;
+		drawLock.unlock();
+		updated = false;
 	}
-
-	drawLock.unlock();
+	for (auto &var : drawObjects)
+	{
+		var.second->DrawScreen();
+	}
 }
 
 
@@ -59,6 +50,8 @@ void Draw::AddObjectToDraw(DrawingObjects* drawObj)
 
 	SortObjectsByZorder();
 
+	updated = true;
+
 	drawLock.unlock();
 }
 
@@ -67,6 +60,8 @@ void Draw::RemoveDrawObject(std::string name)
 	drawLock.lock();
 
 	drawObjectsBuffer.erase(name);
+
+	updated = true;
 
 	drawLock.unlock();
 }

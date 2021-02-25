@@ -21,17 +21,17 @@
 	{
 		public int x2;
 		public int y2;
-		public double maxLength;
-		public double minLength;
+		public int maxLength;
+		public int minLength;
 		public byte color;
 	}
 
-	class DrawingLineArrow : DrawingObjects
+	class DrawingArrow : DrawingObjects
 	{
 		public int x2;
 		public int y2;
-		public double maxLength;
-		public double minLength;
+		public int maxLength;
+		public int minLength;
 		public byte color;
 	};
 
@@ -47,7 +47,4 @@
 		public int rad;
 		public byte color;
 	};
-
-
-
 }

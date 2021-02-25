@@ -1,6 +1,7 @@
 #pragma once
 #include <windows.h>
 #include <string>
+#include <cmath>
 
 class DrawingObjects
 {
@@ -19,60 +20,55 @@ public:
 	int zOrder;
 	bool visible;
 	
-	virtual void drawScreen() = 0;
+	virtual void DrawScreen() = 0;
+
+	void DrawPixel(int xPos, int yPos, byte color);
 
 };
 
 class DrawingText : public DrawingObjects
 {
 public:
-	int spaceBetweenChars = -1000; //default
+	int spaceBetweenChars = -1000;
 	std::string text;
 
-	void drawScreen();
+	void DrawScreen();
 };
 
 class DrawingLine : public DrawingObjects
 {
 public:
-	int x2;
-	int y2;
-	double maxLength;
-	double minLength;
+	int xPos2;
+	int yPos2;
 	BYTE color;
 
-	void drawScreen();
+	void DrawScreen();
+	void DrawLine(int x1, int y1, int x2, int y2, int color);
 };
 
-class DrawingLineArrow : public DrawingObjects
+class DrawingArrow : public DrawingLine
 {
 public:
-	int x2;
-	int y2;
-	double maxLength;
-	double minLength;
-	BYTE color;
-
-	void drawScreen();
+	void DrawScreen();
 };
 
 class DrawingRect : public DrawingObjects
 {
 public:
-	int x2;
-	int y2;
+	int xPos2;
+	int yPos2;
 	BYTE color;
 
-	void drawScreen();
+	void DrawScreen();
 };
 
-class DrawingCircle : public DrawingObjects
+class DrawingCircle : public DrawingLine
 {
 public:
 	int rad;
 	BYTE color;
 
-	void drawScreen();
+	void DrawScreen();
 };
 
 
