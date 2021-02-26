@@ -55,6 +55,16 @@ namespace ElmaHelper
         [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void RemoveDrawObject(string name);
 
-        #endregion 
+        #endregion
+
+        #region LGR
+
+        [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void InitLGR();
+
+        [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void LoadLGR(string name);
+
+        #endregion
     }
 }

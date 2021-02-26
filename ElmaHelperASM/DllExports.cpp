@@ -1,8 +1,5 @@
 #pragma once
-
 #include "DllExports.h"
-#include "Memory.h"
-#include "Draw.h"
 
 extern "C" 
 {
@@ -106,4 +103,18 @@ extern "C"
 	}
 
 #pragma endregion Drawing
+
+#pragma region
+
+	void dllexp InitLGR() 
+	{
+		LGR.InitLGR();
+	}
+
+	void dllexp LoadLGR(const char* name)
+	{
+		LGR.setLGR(name);
+	}
+
+#pragma endregion LGR
 }

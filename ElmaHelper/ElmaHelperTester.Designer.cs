@@ -29,46 +29,45 @@ namespace ElmaHelper
         /// </summary>
         private void InitializeComponent()
         {
-            this.TestingLeft = new System.Windows.Forms.Button();
-            this.TestingRight = new System.Windows.Forms.Button();
+            this.LgrComboBox = new System.Windows.Forms.ComboBox();
+            this.LoadLgrBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TestingLeft
+            // LgrComboBox
             // 
-            this.TestingLeft.Location = new System.Drawing.Point(273, 240);
-            this.TestingLeft.Name = "TestingLeft";
-            this.TestingLeft.Size = new System.Drawing.Size(75, 23);
-            this.TestingLeft.TabIndex = 0;
-            this.TestingLeft.Text = "turn left";
-            this.TestingLeft.UseVisualStyleBackColor = true;
-            this.TestingLeft.Click += new System.EventHandler(this.Testing_Click);
+            this.LgrComboBox.FormattingEnabled = true;
+            this.LgrComboBox.Location = new System.Drawing.Point(33, 44);
+            this.LgrComboBox.Name = "LgrComboBox";
+            this.LgrComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LgrComboBox.TabIndex = 3;
             // 
-            // TestingRight
+            // LoadLgrBtn
             // 
-            this.TestingRight.Location = new System.Drawing.Point(440, 240);
-            this.TestingRight.Name = "TestingRight";
-            this.TestingRight.Size = new System.Drawing.Size(75, 23);
-            this.TestingRight.TabIndex = 1;
-            this.TestingRight.Text = "turn right";
-            this.TestingRight.UseVisualStyleBackColor = true;
-            this.TestingRight.Click += new System.EventHandler(this.TestingRight_Click);
+            this.LoadLgrBtn.Location = new System.Drawing.Point(192, 44);
+            this.LoadLgrBtn.Name = "LoadLgrBtn";
+            this.LoadLgrBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoadLgrBtn.TabIndex = 4;
+            this.LoadLgrBtn.Text = "Load LGR";
+            this.LoadLgrBtn.UseVisualStyleBackColor = true;
+            this.LoadLgrBtn.Click += new System.EventHandler(this.LoadLgrBtn_Click);
             // 
             // ElmaHelperTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TestingRight);
-            this.Controls.Add(this.TestingLeft);
+            this.ClientSize = new System.Drawing.Size(305, 108);
+            this.Controls.Add(this.LoadLgrBtn);
+            this.Controls.Add(this.LgrComboBox);
             this.Name = "ElmaHelperTester";
             this.Text = "ElmaHelperTester";
+            this.Load += new System.EventHandler(this.ElmaHelperTester_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button TestingLeft;
-        private System.Windows.Forms.Button TestingRight;
+        private System.Windows.Forms.ComboBox LgrComboBox;
+        private System.Windows.Forms.Button LoadLgrBtn;
     }
 }

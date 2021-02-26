@@ -22,6 +22,9 @@
     <Filter Include="Drawing">
       <UniqueIdentifier>{ca1f7a70-60f3-4dbc-8fff-31e16c9eeab6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LGR">
+      <UniqueIdentifier>{0e25c968-2bde-4c12-b843-2d1e3e7ed7e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -51,6 +54,12 @@
     <ClInclude Include="DrawInject.h">
       <Filter>Drawing</Filter>
     </ClInclude>
+    <ClInclude Include="LGR.h">
+      <Filter>LGR</Filter>
+    </ClInclude>
+    <ClInclude Include="LGRInject.h">
+      <Filter>LGR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -73,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="DrawInject.cpp">
       <Filter>Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="LGR.cpp">
+      <Filter>LGR</Filter>
+    </ClCompile>
+    <ClCompile Include="LGRInject.cpp">
+      <Filter>LGR</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

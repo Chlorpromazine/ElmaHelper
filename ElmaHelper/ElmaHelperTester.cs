@@ -11,14 +11,15 @@ namespace ElmaHelper
             SetStyle(ControlStyles.Selectable, false);
         }
 
-        private void Testing_Click(object sender, EventArgs e)
+        private void ElmaHelperTester_Load(object sender, EventArgs e)
         {
-           
+            LGR.GetLGRList();
+            LgrComboBox.DataSource = LGR.lgrList;
         }
 
-        private void TestingRight_Click(object sender, EventArgs e)
+        private void LoadLgrBtn_Click(object sender, EventArgs e)
         {
-           
+            LGR.LoadLGR(LgrComboBox.SelectedItem.ToString());
         }
     }
 }

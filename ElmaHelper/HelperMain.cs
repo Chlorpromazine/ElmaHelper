@@ -9,7 +9,7 @@ namespace ElmaHelper
         {
             Testing.Initialize();
             Draw.Initialize();
-
+            LGR.Initialize();
           
 
             var testObj2 = new DrawingLine
