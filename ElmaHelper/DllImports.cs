@@ -37,9 +37,6 @@ namespace ElmaHelper
 
         #region Drawing
 
-        [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void InitDrawing();
-
         [DllImport("ElmaHelperASM.dll", EntryPoint = "DrawTxt", CallingConvention = CallingConvention.Cdecl)]
         public static extern void DrawText(string text, string name, string parentName, int x, int y, int zOrder, bool visible, int spaceBetweenChars);
 
@@ -58,9 +55,6 @@ namespace ElmaHelper
         #endregion
 
         #region LGR
-
-        [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void InitLGR();
 
         [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void LoadLGR(string name);

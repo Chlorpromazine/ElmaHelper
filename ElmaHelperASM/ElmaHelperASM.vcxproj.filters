@@ -25,6 +25,9 @@
     <Filter Include="LGR">
       <UniqueIdentifier>{0e25c968-2bde-4c12-b843-2d1e3e7ed7e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{779501e4-9c39-43af-9655-af6d58ba66fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -60,6 +63,15 @@
     <ClInclude Include="LGRInject.h">
       <Filter>LGR</Filter>
     </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelInject.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelObjects.h">
+      <Filter>Level</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -88,6 +100,15 @@
     </ClCompile>
     <ClCompile Include="LGRInject.cpp">
       <Filter>LGR</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelInject.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelObjects.cpp">
+      <Filter>Level</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

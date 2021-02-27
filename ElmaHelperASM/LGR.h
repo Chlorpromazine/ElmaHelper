@@ -11,7 +11,8 @@ private:
 public:
 	static bool LGRchanged;
 
-	static void InitLGR();
+	LGRClass();
+
 	static void changeLGR();
 	static void setLGR(const char* name);
 

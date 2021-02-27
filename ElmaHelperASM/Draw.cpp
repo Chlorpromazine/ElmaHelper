@@ -7,15 +7,13 @@ std::map<std::string, DrawingObjects*> Draw::drawObjectsBuffer;
 std::mutex Draw::drawLock;
 bool Draw::updated;
 
-void Draw::InitDrawing() 
+Draw::Draw() 
 {
 	//Hook code to add our drawing functions
 	Memory.JumpPatch((BYTE*)0x0049559E, (BYTE*)&drawInject, 0);
 
 	updated = false;
 }
-
-
 
 void Draw::DrawAllObjects()
 {

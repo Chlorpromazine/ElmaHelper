@@ -19,7 +19,7 @@ private:
 	static bool updated;
 
 public:
-	static void InitDrawing();
+	Draw();
 
 	static void AddObjectToDraw(DrawingObjects* drawObj);
 

@@ -24,11 +24,7 @@ extern "C"
 #pragma endregion Memory
 
 #pragma region
-	void dllexp InitDrawing() 
-	{
-		Drawing.InitDrawing();
-	}
-
+	
 	/*void dllexp DrawObject(DrawingObjects* drawObj)
 	{
 		Drawing.AddObjectToDraw(drawObj);
@@ -105,11 +101,6 @@ extern "C"
 #pragma endregion Drawing
 
 #pragma region
-
-	void dllexp InitLGR() 
-	{
-		LGR.InitLGR();
-	}
 
 	void dllexp LoadLGR(const char* name)
 	{

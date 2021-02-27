@@ -11,11 +11,6 @@ namespace ElmaHelper
 
 		public static List<string> lgrList;
 
-		public static void Initialize()
-        {
-			DllImports.InitLGR();
-        }
-
 		public static void GetLGRList()
         {
 			var lgrs = Directory.GetFiles("Lgr").Select(x => x = Path.GetFileNameWithoutExtension(x)).ToList();

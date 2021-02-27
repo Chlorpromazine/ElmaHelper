@@ -8,8 +8,6 @@ namespace ElmaHelper
         static public int HelperExport(string L)
         {
             Testing.Initialize();
-            Draw.Initialize();
-            LGR.Initialize();
           
 
             var testObj2 = new DrawingLine

@@ -158,6 +158,9 @@
     <ClInclude Include="DrawingObjects.h" />
     <ClInclude Include="DrawInject.h" />
     <ClInclude Include="ElmaHelperASM.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelInject.h" />
+    <ClInclude Include="LevelObjects.h" />
     <ClInclude Include="LGR.h" />
     <ClInclude Include="LGRInject.h" />
     <ClInclude Include="Memory.h" />
@@ -170,6 +173,9 @@
     <ClCompile Include="DrawingObjects.cpp" />
     <ClCompile Include="DrawInject.cpp" />
     <ClCompile Include="ElmaHelperASM.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelInject.cpp" />
+    <ClCompile Include="LevelObjects.cpp" />
     <ClCompile Include="LGR.cpp" />
     <ClCompile Include="LGRInject.cpp" />
     <ClCompile Include="Memory.cpp">

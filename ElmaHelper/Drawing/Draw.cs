@@ -4,11 +4,6 @@ namespace ElmaHelper.Drawing
 {
     class Draw
     {
-        public static void Initialize()
-        {
-            DllImports.InitDrawing();
-        }
-
         public static void DrawObject(DrawingObjects drawObj)
         {
             //todo: find a way to send c# objects to c++
