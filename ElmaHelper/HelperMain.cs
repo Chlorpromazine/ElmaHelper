@@ -1,4 +1,6 @@
 ﻿using ElmaHelper.Drawing;
+using System;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace ElmaHelper
@@ -22,8 +24,9 @@ namespace ElmaHelper
                 visible = true,
                 color = 231
             };
-
-            
+           
+            EventHandler.AddEventHandler(0, 0, new [] { "army", "1", "test23" });
+            //DllImports.AddEventHandler(2, 2);
 
             while (true)
             {

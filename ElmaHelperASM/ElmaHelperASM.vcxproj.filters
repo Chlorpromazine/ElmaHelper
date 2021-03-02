@@ -28,6 +28,12 @@
     <Filter Include="Level">
       <UniqueIdentifier>{779501e4-9c39-43af-9655-af6d58ba66fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EventHandler">
+      <UniqueIdentifier>{458fe10f-9897-4a2e-a0ed-55aeb33d4ec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generic">
+      <UniqueIdentifier>{c2d0aabf-e0d4-4700-9460-0ea56966dd33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -72,6 +78,15 @@
     <ClInclude Include="LevelObjects.h">
       <Filter>Level</Filter>
     </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>EventHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Events.h">
+      <Filter>EventHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Generic.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -109,6 +124,15 @@
     </ClCompile>
     <ClCompile Include="LevelObjects.cpp">
       <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>EventHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Events.cpp">
+      <Filter>EventHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Generic.cpp">
+      <Filter>Generic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

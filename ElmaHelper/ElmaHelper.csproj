@@ -57,6 +57,7 @@
     <Compile Include="ElmaHelperTester.Designer.cs">
       <DependentUpon>ElmaHelperTester.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventHandler.cs" />
     <Compile Include="HelperMain.cs" />
     <Compile Include="LGR\LGR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

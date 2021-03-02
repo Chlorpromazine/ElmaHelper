@@ -60,5 +60,15 @@ namespace ElmaHelper
         public static extern void LoadLGR(string name);
 
         #endregion
+
+        #region EventHandler
+
+        [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void AddEventHandler(int type, int trigger, string args);
+
+        [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void RemoveEventHandler(int type, int trigger);
+
+        #endregion
     }
 }

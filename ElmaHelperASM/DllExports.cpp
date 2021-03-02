@@ -108,4 +108,20 @@ extern "C"
 	}
 
 #pragma endregion LGR
+
+#pragma region
+
+	void dllexp AddEventHandler(int type, int trigger, const char* args)
+	{
+		auto convertedArgs = EventHandler::ConvertArgs(args);
+
+		EventHandler::AddEvent(static_cast<EventHandler::EventType>(type), static_cast<EventHandler::EventAction>(trigger), convertedArgs);
+	}
+
+	void dllexp RemoveEventHandler(int type, int trigger)
+	{
+		EventHandler::RemoveEvent(static_cast<EventHandler::EventType>(type), static_cast<EventHandler::EventAction>(trigger));
+	}
+
+#pragma endregion EventHandler
 }
