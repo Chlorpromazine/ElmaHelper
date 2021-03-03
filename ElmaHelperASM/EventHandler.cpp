@@ -1,14 +1,6 @@
 #include "EventHandler.h"
 
-//var argStrList = new List<string>();
-//
-//foreach(var arg in args)
-//{
-//	argStrList.Add(arg.GetType().ToString().Replace("System.", "") + ":" + arg.ToString());
-//}
-//var argStr = string.Join("|", argStrList);
-//
-//DllImports.AddEventHandler(type, trigger, argStr);
+std::vector<EventHandler::eventStruct> EventHandler::Events;
 
 std::vector<std::string> EventHandler::ConvertArgs(const char* args)
 {
@@ -24,7 +16,9 @@ std::function<void(std::vector<std::string>)> EventHandler::Create(EventAction a
 	switch (action) 
 	{
 	case EventAction::dosomething:
-		std::bind(&LGR.setLGR, func, "Army");
+		func = std::bind(Events::setLGR, std::placeholders::_1);
+		//std::bind(LGR.setLGR, func, std::placeholders::_1);
+		//std::function<int(int)> bar = std::bind(LGR.setLGR, 2, std::placeholders::_1);
 		break;
 	case EventAction::dosomethingelse:
 		break;
@@ -36,12 +30,12 @@ void EventHandler::AddEvent(EventType type, EventAction action, std::vector<std:
 {
 	auto functionAction = Create(action);
 
-	auto functionPair = std::make_pair(functionAction, args);
+	auto functionPair = eventStruct(type, functionAction, args);
 
 	switch (type) 
 	{
 	case EventType::touchApple:
-		TouchApple.Events.push_back(functionPair);
+		Events.push_back(functionPair);
 		break;
 	case EventType::touchFlower:
 		break;
@@ -53,10 +47,11 @@ void EventHandler::RemoveEvent(EventType type, EventAction action)
 
 }
 
-void EventHandler::Trigger()
+void EventHandler::Trigger(EventType type)
 {
 	for (auto Event : Events) 
 	{
-		Event.first(Event.second);
+		if(type == Event.type)
+			Event.func(Event.args);
 	}
 }

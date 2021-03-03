@@ -19,6 +19,19 @@ public:
 		dosomethingelse
 	};
 
+	struct eventStruct
+	{
+		EventType type;
+		std::function<void(std::vector<std::string>)> func;
+		std::vector<std::string> args;
+		eventStruct(EventType t, std::function<void(std::vector<std::string>)> f, std::vector<std::string> a) 
+		{
+			type = t;
+			func = f;
+			args = a;
+		}
+	};
+
 	static std::vector<std::string> ConvertArgs(const char* args);
 
 	static std::function<void(std::vector<std::string>)> Create(EventAction action);
@@ -27,10 +40,9 @@ public:
 
 	static void RemoveEvent(EventType type, EventAction action);
 
-	void Trigger();
+	static void Trigger(EventType type);
 
-	//vector of pair containing the function and args
-	std::vector<std::pair<std::function<void(std::vector<std::string>)>, std::vector<std::string>>> Events;
+	static std::vector<eventStruct> Events;
 
-}static TouchApple, TouchFlower;
+};
 

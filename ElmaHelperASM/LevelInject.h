@@ -32,6 +32,7 @@ public:
 
 }static LevelInj;
 
+void testTrigger();
 void  __declspec() GetAllObjects();
 void __declspec() ResetObjects();
 void __declspec() OnHitKiller();

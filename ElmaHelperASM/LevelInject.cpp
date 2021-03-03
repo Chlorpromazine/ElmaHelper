@@ -131,14 +131,14 @@ void __declspec(naked) getTimeObject()
 //Triggers after touching an apple with wheel or head.
 void __declspec(naked) OnTouchApple()
 {
-	__asm { pusha }
+	
 	//To update the apple counter
 	//draw::dd.statsChanged = true;
 
-	TouchApple.Trigger();
+ 	EventHandler::Trigger(EventHandler::EventType::touchApple);
+	
 
 	__asm {
-		popa
 		mov[eax + 0x2C], 00000000
 		jmp LevelInj.touchAppleEnd
 	}
