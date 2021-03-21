@@ -64,10 +64,10 @@ namespace ElmaHelper
         #region EventHandler
 
         [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void AddEventHandler(int type, int trigger, string args);
+        public static extern void AddEventHandler(string functionName, int trigger, string args);
 
         [DllImport("ElmaHelperASM.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void RemoveEventHandler(int type, int trigger);
+        public static extern void RemoveEventHandler(string functionName, int trigger);
 
         #endregion
     }

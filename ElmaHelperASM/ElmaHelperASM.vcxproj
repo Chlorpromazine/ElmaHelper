@@ -153,14 +153,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DllExports.h" />
-    <ClInclude Include="dllmain.h" />
     <ClInclude Include="Draw.h" />
     <ClInclude Include="DrawingObjects.h" />
     <ClInclude Include="DrawInject.h" />
-    <ClInclude Include="ElmaHelperASM.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="Events.h" />
-    <ClInclude Include="Generic.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Kuski.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelInject.h" />
     <ClInclude Include="LevelObjects.h" />
@@ -178,7 +177,8 @@
     <ClCompile Include="ElmaHelperASM.cpp" />
     <ClCompile Include="EventHandler.cpp" />
     <ClCompile Include="Events.cpp" />
-    <ClCompile Include="Generic.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Kuski.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelInject.cpp" />
     <ClCompile Include="LevelObjects.cpp" />

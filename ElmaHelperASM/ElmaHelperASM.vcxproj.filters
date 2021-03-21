@@ -31,7 +31,10 @@
     <Filter Include="EventHandler">
       <UniqueIdentifier>{458fe10f-9897-4a2e-a0ed-55aeb33d4ec0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Generic">
+    <Filter Include="Kuski">
+      <UniqueIdentifier>{8b342ce8-b84a-44df-9b3c-87a2ff0c9f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
       <UniqueIdentifier>{c2d0aabf-e0d4-4700-9460-0ea56966dd33}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -40,12 +43,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dllmain.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ElmaHelperASM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Memory.h">
@@ -84,8 +81,11 @@
     <ClInclude Include="Events.h">
       <Filter>EventHandler</Filter>
     </ClInclude>
-    <ClInclude Include="Generic.h">
-      <Filter>Generic</Filter>
+    <ClInclude Include="Kuski.h">
+      <Filter>Kuski</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -131,8 +131,11 @@
     <ClCompile Include="Events.cpp">
       <Filter>EventHandler</Filter>
     </ClCompile>
-    <ClCompile Include="Generic.cpp">
-      <Filter>Generic</Filter>
+    <ClCompile Include="Kuski.cpp">
+      <Filter>Kuski</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

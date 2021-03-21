@@ -51,6 +51,7 @@
     <Compile Include="Drawing\Color.cs" />
     <Compile Include="Drawing\Draw.cs" />
     <Compile Include="Drawing\DrawingObjects.cs" />
+    <Compile Include="ElmaFunction.cs" />
     <Compile Include="ElmaHelperTester.cs">
       <SubType>Form</SubType>
     </Compile>

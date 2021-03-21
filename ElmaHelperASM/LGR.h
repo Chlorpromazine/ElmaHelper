@@ -14,6 +14,6 @@ public:
 	LGRClass();
 
 	static void changeLGR();
-	static void setLGR(const char* name);
+	static void SetLGR(const char* name);
 
 }static LGR;

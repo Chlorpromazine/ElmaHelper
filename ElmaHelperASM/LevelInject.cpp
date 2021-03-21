@@ -135,7 +135,7 @@ void __declspec(naked) OnTouchApple()
 	//To update the apple counter
 	//draw::dd.statsChanged = true;
 
- 	EventHandler::Trigger(EventHandler::EventType::touchApple);
+ 	EventHandler::Trigger(EventHandler::TriggerType::touchApple);
 	
 
 	__asm {

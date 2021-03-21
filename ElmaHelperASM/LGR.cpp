@@ -18,7 +18,7 @@ void LGRClass::changeLGR()
 }
 
 
-void LGRClass::setLGR(const char* name)
+void LGRClass::SetLGR(const char* name)
 {
 	LGRchanged = true;
 	LGRName = std::string(name);

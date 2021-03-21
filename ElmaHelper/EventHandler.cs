@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace ElmaHelper
+﻿namespace ElmaHelper
 {
     class EventHandler
     {
-        public static void AddEventHandler(int type, int trigger, string[] args)
+        public static void AddEventHandler(FuncName type, int trigger, string[] args)
         {
             var argStr = string.Join("|", args);
 

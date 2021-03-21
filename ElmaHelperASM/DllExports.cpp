@@ -104,23 +104,23 @@ extern "C"
 
 	void dllexp LoadLGR(const char* name)
 	{
-		LGR.setLGR(name);
+		LGR.SetLGR(name);
 	}
 
 #pragma endregion LGR
 
 #pragma region
 
-	void dllexp AddEventHandler(int type, int trigger, const char* args)
+	void dllexp AddEventHandler(const char* functionName, int trigger, const char* args)
 	{
 		auto convertedArgs = EventHandler::ConvertArgs(args);
 
-		EventHandler::AddEvent(static_cast<EventHandler::EventType>(type), static_cast<EventHandler::EventAction>(trigger), convertedArgs);
+		EventHandler::AddEvent(static_cast<EventHandler::TriggerType>(trigger), functionName, convertedArgs);
 	}
 
-	void dllexp RemoveEventHandler(int type, int trigger)
+	void dllexp RemoveEventHandler(const char* functionName, int trigger)
 	{
-		EventHandler::RemoveEvent(static_cast<EventHandler::EventType>(type), static_cast<EventHandler::EventAction>(trigger));
+		EventHandler::RemoveEvent(static_cast<EventHandler::TriggerType>(trigger), functionName);
 	}
 
 #pragma endregion EventHandler

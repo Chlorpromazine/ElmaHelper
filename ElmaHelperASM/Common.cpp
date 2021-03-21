@@ -1,6 +1,6 @@
-#include "Generic.h"
+#include "Common.h"
 
-std::vector<std::string> Generic::split(const std::string& s, char delim) {
+std::vector<std::string> Common::split(const std::string& s, char delim) {
     std::stringstream ss(s);
     std::string item;
     std::vector<std::string> elems;

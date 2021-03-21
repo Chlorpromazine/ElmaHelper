@@ -1,30 +1,24 @@
 #pragma once
-#include <functional>
 #include <vector>
 #include "LGR.h"
 #include <string>
 #include "Events.h"
-#include "Generic.h"
+#include "Common.h"
 
 class EventHandler
 {
 public:
-	enum EventType {
+	enum TriggerType {
 		touchApple,
 		touchFlower
 	};
 
-	enum EventAction {
-		dosomething,
-		dosomethingelse
-	};
-
 	struct eventStruct
 	{
-		EventType type;
+		TriggerType type;
 		std::function<void(std::vector<std::string>)> func;
 		std::vector<std::string> args;
-		eventStruct(EventType t, std::function<void(std::vector<std::string>)> f, std::vector<std::string> a) 
+		eventStruct(TriggerType t, std::function<void(std::vector<std::string>)> f, std::vector<std::string> a) 
 		{
 			type = t;
 			func = f;
@@ -34,13 +28,13 @@ public:
 
 	static std::vector<std::string> ConvertArgs(const char* args);
 
-	static std::function<void(std::vector<std::string>)> Create(EventAction action);
+	static std::function<void(std::vector<std::string>)> Create(std::string action);
 
-	static void AddEvent(EventType type, EventAction action, std::vector<std::string> args);
+	static void AddEvent(TriggerType type, std::string action, std::vector<std::string> args);
 
-	static void RemoveEvent(EventType type, EventAction action);
+	static void RemoveEvent(TriggerType type, std::string action);
 
-	static void Trigger(EventType type);
+	static void Trigger(TriggerType type);
 
 	static std::vector<eventStruct> Events;
 

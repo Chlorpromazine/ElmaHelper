@@ -25,9 +25,9 @@ namespace ElmaHelper
                 color = 231
             };
            
-            EventHandler.AddEventHandler(0, 0, new [] { "army", "1", "test23" });
-            //DllImports.AddEventHandler(2, 2);
+            EventHandler.AddEventHandler(ElmaFunction.SetLGR, 0, new[] { "army" });
 
+            EventHandler.AddEventHandler(ElmaFunction.SetAcceleration, 0, new[] { "1200" });
             while (true)
             {
 
